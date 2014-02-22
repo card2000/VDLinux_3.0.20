@@ -1,0 +1,27 @@
+static char tomoyo_builtin_profile[] __initdata =
+"PROFILE_VERSION=20110903\n"
+"0-COMMENT=-----Disabled Mode-----\n"
+"0-PREFERENCE={ max_audit_log=1024 max_learning_entry=2048 enforcing_penalty=0 }\n"
+"0-CONFIG={ mode=disabled grant_log=no reject_log=yes }\n"
+"1-COMMENT=-----Learning Mode-----\n"
+"1-PREFERENCE={ max_audit_log=1024 max_learning_entry=2048 enforcing_penalty=0 }\n"
+"1-CONFIG={ mode=learning grant_log=no reject_log=yes }\n"
+"2-COMMENT=-----Permissive Mode-----\n"
+"2-PREFERENCE={ max_audit_log=1024 max_learning_entry=2048 enforcing_penalty=0 }\n"
+"2-CONFIG={ mode=permissive grant_log=no reject_log=yes }\n"
+"3-COMMENT=-----Enforcing Mode-----\n"
+"3-PREFERENCE={ max_audit_log=1024 max_learning_entry=2048 enforcing_penalty=0 }\n"
+"3-CONFIG={ mode=enforcing grant_log=no reject_log=yes }\n"
+"";
+static char tomoyo_builtin_exception_policy[] __initdata =
+"initialize_domain /sbin/modprobe from any\n"
+"initialize_domain /sbin/hotplug from any\n"
+"";
+static char tomoyo_builtin_domain_policy[] __initdata =
+"";
+#ifdef CONFIG_SECURITY_TOMOYO_MANAGER
+static char tomoyo_builtin_manager[] __initdata =
+"";
+#endif
+static char tomoyo_builtin_stat[] __initdata =
+"";

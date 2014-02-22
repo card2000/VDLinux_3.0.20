@@ -1,0 +1,1 @@
+cmd_fs/tntfs/tntfs.ko := arm-v7a15v3r1-linux-gnueabi-ld -EL -r  -T /home2/jison/Work/OpenSource/2012.Latest/VDLinux_3.0.20/linux-3.0.20/scripts/module-common.lds --build-id  -o fs/tntfs/tntfs.ko fs/tntfs/tntfs.o fs/tntfs/tntfs.mod.o
